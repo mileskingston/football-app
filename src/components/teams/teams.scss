@@ -1,0 +1,26 @@
+.teams {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      flex-basis: 100%;
+      padding: 10px;
+      border-bottom: $border-default;
+
+      @media screen and (max-width: $xs-max) {
+        &:last-child {
+          border-bottom: 0; 
+        }
+      }
+
+      @media screen and (min-width: $xs-min) {
+        flex-basis: 50%;
+      }
+
+      @media screen and (min-width: $sm-min) {
+        flex-basis: 33.3333%;
+      }
+    }
+  }
+}

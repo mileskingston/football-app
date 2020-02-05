@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './button/Button';
-import { routes }  from '../utils/route-utils';
+import Button from '../button/Button';
+import { routes }  from '../../utils/route-utils';
 
 const Header = () => {
   const [isOpen, toggleMenu] = useState(false);

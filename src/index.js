@@ -10,7 +10,7 @@ import reducers from './store/index';
 import rootSaga from './sagas/data';
 import App from './App';
 
-import './styles/base.css';
+import './styles/base.scss';
 
 const sagaMiddleware = createSagaMiddleware();
 

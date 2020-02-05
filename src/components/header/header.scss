@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  height: 55px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: $navy-dark;
+  transition: all 0.25s ease-in-out;
+  z-index: 1;
+
+  &--open {
+    left: 200px;
+  }
+
+  .btn {
+    border: 1px solid $white;
+  }
+}
+
+.menu {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: #06314b;
+  transition: all 0.3s ease-in-out;
+  
+  &--open {
+    left: 0;
+  }
+  
+  & > ul {
+    padding-left: 0;
+    margin: 0;
+    
+    & a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: $white;
+      
+      &:hover {
+        background-color: $navy;
+      }
+    }
+  }
+}

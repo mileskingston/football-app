@@ -10,7 +10,7 @@ const standings = (state = INIT_STATE, action) => {
     case STANDINGS_SUCCESS:
       return {
         ...state,
-        standings: action.standings
+        ...action.standings
       };
     case API_FAIL:
       return {

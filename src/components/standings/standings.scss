@@ -1,0 +1,30 @@
+.standings {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  margin-bottom: .6em;
+}
+
+.standings-title,
+.standings-cell {
+  text-align: center;
+  vertical-align: baseline;
+  padding: 5px;
+}
+
+.standings-title {
+  border-top: $border-default;
+  border-bottom: 2px solid $grey;
+}
+
+.standings-cell {
+  border-bottom: $border-default;
+}

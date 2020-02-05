@@ -1,16 +1,14 @@
-# Football App
+# Premier League App
 
-Using the [insert name here] API.
+Using the Football Data http://api.football-data.org API.
 
-`yarn`
-`yarn start`
-`yarn build`
-`yarn test`
-`yarn test:watch`
+install `yarn`
+start app `yarn start`
+build app `yarn build`
+run unit tests `yarn test`
+run unit tests and watch `yarn test:watch`
 
 ## To do
 - scss
-- call actual api
 - setup jest/enzyme/snapshots
 - unit testing
-- routing

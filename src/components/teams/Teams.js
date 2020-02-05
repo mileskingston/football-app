@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { teamsRequest } from '../../actions/index';
+import { removeFc } from '../../utils/string-utils';
 
 class Teams extends PureComponent {
   constructor(props) {
@@ -15,8 +16,8 @@ class Teams extends PureComponent {
         <div className="teams__list">
           {this.props.teams
             .map(team =>
-              <div className="team" key={team.id}>
-                {team.name}
+              <div className="teams__list-item" key={team.id}>
+                {removeFc(team.name)}
               </div>
             )
           }

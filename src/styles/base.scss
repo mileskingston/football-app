@@ -1,0 +1,43 @@
+@import "./variables";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: $base-font-size;
+  font-family: $base-font-style;
+}
+
+.container {
+  margin: 75px auto 0;
+  padding: 0 10px;
+  max-width: 1200px;
+
+  @media screen and (min-width: $xs-min) {
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+}
+
+@media(max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media(min-width: 767px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+
+@import "../components/button/button.scss";
+@import "../components/header/header.scss";
+@import "../components/standings/standings.scss";
+@import "../components/teams/teams.scss";
