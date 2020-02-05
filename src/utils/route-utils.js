@@ -2,12 +2,10 @@ export const routes = [
   {
     "title": "Home",
     "path": "",
-    "component": "",
   },
   {
     "title": "Standings",
     "path": "standings",
-    "component": "<Standings />",
   },
   {
     "title": "Results",
@@ -17,11 +15,9 @@ export const routes = [
   {
     "title": "Fixtures",
     "path": "fixtures",
-    "component": "<Fixtures />",
   },
   {
     "title": "Teams",
     "path": "teams",
-    "component": "<Teams />",
   }
 ];

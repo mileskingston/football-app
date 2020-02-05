@@ -1,22 +1,12 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
-import { apiRequest } from '../../actions/index';
+import { standingsRequest } from '../../actions/index';
+import { removeFc } from '../../utils/string-utils';
 
 class Standings extends PureComponent {
   constructor(props) {
     super(props);
-  }
-
-  formatForm(form) {
-    let formClass = '';
-    const splitForm = form.split('');
-    
-    return splitForm.map((item, index) => {
-      const itemLowercase = item.toLowerCase();
-      formClass = `form--${itemLowercase}`;
-      return (<span key={index} className={formClass}>{item}</span>);
-    });
   }
 
   render() {
@@ -51,7 +41,6 @@ class Standings extends PureComponent {
                 <span className="desktop">Points</span>
                 <span className="mobile">Pts</span>
               </th>
-              {/* <th className="standings-title desktop align-left">Form</th> */}
             </tr>
           </thead>
 
@@ -61,7 +50,7 @@ class Standings extends PureComponent {
               .map(team =>
                 <tr key={team.team.id}>
                   <td className="standings-cell">{team.position}</td>
-                  <td className="standings-cell align-left">{team.team.name}</td>
+                  <td className="standings-cell align-left">{removeFc(team.team.name)}</td>
                   <td className="standings-cell">{team.playedGames}</td>
                   <td className="standings-cell">{team.won}</td>
                   <td className="standings-cell">{team.draw}</td>
@@ -70,7 +59,6 @@ class Standings extends PureComponent {
                   <td className="standings-cell desktop">{team.goalsAgainst}</td>
                   <td className="standings-cell">{team.goalDifference}</td>
                   <td className="standings-cell">{team.points}</td>
-                  {/* <td className="standings-cell desktop align-left">{this.formatForm(team.form)}</td> */}
                 </tr>
               )
             }
@@ -85,4 +73,4 @@ const mapStateToProps = (state) => ({
   standings: state.table.standings
 });
 
-export default connect(mapStateToProps, { apiRequest })(Standings);
+export default connect(mapStateToProps, { standingsRequest })(Standings);

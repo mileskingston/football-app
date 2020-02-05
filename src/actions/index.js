@@ -1,19 +1,28 @@
-export const API_REQUEST = 'API_REQUEST';
-export const API_SUCCESS = 'API_SUCCESS';
+export const STANDINGS_REQUEST = 'STANDINGS_REQUEST';
+export const TEAMS_REQUEST = 'TEAMS_REQUEST';
+export const STANDINGS_SUCCESS = 'STANDINGS_SUCCESS';
+export const TEAMS_SUCCESS = 'TEAMS_SUCCESS';
 export const API_FAIL = 'API_FAIL';
 
-export const apiRequest = () => ({
-  type: API_REQUEST
+export const standingsRequest = () => ({
+  type: STANDINGS_REQUEST
 });
-export const apiSuccess = (data) => ({
-  type: API_SUCCESS,
-  data
+
+export const teamsRequest = () => ({
+  type: TEAMS_REQUEST
 });
-export const apiFail = (data) => ({
-  type: API_FAIL,
+
+export const teamSuccess = (data) => ({
+  type: TEAM_SUCCESS,
   data
 });
 
-export const callFormRequest = () => ({
-  type: API_REQUEST
+export const standingsSuccess = (data) => ({
+  type: STANDINGS_SUCCESS,
+  data
+});
+
+export const apiFail = (data) => ({
+  type: TEAMS_SUCCESS,
+  data
 });

@@ -1,18 +1,18 @@
-import { API_SUCCESS } from '../actions';
+import { STANDINGS_SUCCESS, API_FAIL } from '../actions';
 
 const INIT_STATE = {
   standings: [],
   errors: null
 };
 
-const table = (state = INIT_STATE, action) => {
+const standings = (state = INIT_STATE, action) => {
   switch(action.type) {
-    case API_SUCCESS:
+    case STANDINGS_SUCCESS:
       return {
         ...state,
         standings: action.standings
       };
-    case API_SUCCESS:
+    case API_FAIL:
       return {
         ...state,
         errors: action.payload
@@ -22,4 +22,4 @@ const table = (state = INIT_STATE, action) => {
   }
 }
 
-export default table;
+export default standings;
