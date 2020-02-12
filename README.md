@@ -12,4 +12,4 @@ run unit tests and watch `yarn test:watch`
 - add unit tests
 - team pages
 - fixtures pages
-- add cypress
+- add cypress e2e
