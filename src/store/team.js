@@ -1,16 +1,16 @@
-import { STANDINGS_SUCCESS, API_FAIL } from '../actions';
+import { TEAM_SUCCESS, API_FAIL } from '../actions';
 
 const INIT_STATE = {
-  standings: [],
+  team: {},
   errors: null
 };
 
-const standings = (state = INIT_STATE, action) => {
+const team = (state = INIT_STATE, action) => {
   switch(action.type) {
-    case STANDINGS_SUCCESS:
+    case TEAM_SUCCESS:
       return {
         ...state,
-        standings: action.standings
+        team: action.data
       };
     case API_FAIL:
       return {
@@ -22,4 +22,4 @@ const standings = (state = INIT_STATE, action) => {
   }
 }
 
-export default standings;
+export default team;

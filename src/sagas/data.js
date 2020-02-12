@@ -20,6 +20,15 @@ function* fetchTeams() {
   }
 }
 
+function* fetchTeam() {
+  try {
+    const data = yield call(api.callTeamApi);
+    yield put({ type: actions.TEAM_SUCCESS, data });
+  } catch(e) {
+    yield put(actions.apiFail(data));
+  }
+}
+
 function* watchFetchStandings() {
   yield takeEvery(actions.STANDINGS_REQUEST, fetchStandings);
 };
@@ -28,6 +37,10 @@ function* watchFetchTeams() {
   yield takeEvery(actions.TEAMS_REQUEST, fetchTeams);
 };
 
+function* watchFetchTeam() {
+  yield takeEvery(actions.TEAM_REQUEST, fetchTeam);
+};
+
 export default function* rootSaga() {
-  yield all([fork(fetchStandings), fork(watchFetchStandings), fork(fetchTeams), fork(watchFetchTeams)]);
+  yield all([fork(fetchStandings), fork(watchFetchStandings), fork(fetchTeams), fork(watchFetchTeams), fork(fetchTeam), fork(watchFetchTeam)]);
 }

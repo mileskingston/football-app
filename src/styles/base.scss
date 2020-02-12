@@ -37,7 +37,8 @@ body {
   text-align: left;
 }
 
-@import "../components/button/button.scss";
-@import "../components/header/header.scss";
-@import "../components/standings/standings.scss";
-@import "../components/teams/teams.scss";
+@import "../components/button/Button.scss";
+@import "../components/header/Header.scss";
+@import "../components/standings/Standings.scss";
+@import "../components/teams/Teams.scss";
+@import "../components/team/Team.scss";

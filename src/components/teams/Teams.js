@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { teamsRequest } from '../../actions/index';
-import { removeFc } from '../../utils/string-utils';
+import { removeFc, urlFormat } from '../../utils/string-utils';
 
 class Teams extends PureComponent {
   constructor(props) {
@@ -17,7 +18,7 @@ class Teams extends PureComponent {
           {this.props.teams
             .map(team =>
               <div className="teams__list-item" key={team.id}>
-                {removeFc(team.name)}
+                <Link to={{ pathname: `/teams/${urlFormat(team.shortName)}`, state: { id: `${team.id}`}}}>{removeFc(team.name)}</Link>
               </div>
             )
           }

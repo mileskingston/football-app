@@ -9,6 +9,7 @@ run unit tests `yarn test`
 run unit tests and watch `yarn test:watch`
 
 ## To do
-- scss
-- setup jest/enzyme/snapshots
-- unit testing
+- add unit tests
+- team pages
+- fixtures pages
+- add cypress

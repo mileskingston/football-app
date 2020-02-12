@@ -70,7 +70,7 @@ class Standings extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-  standings: state.table.standings
+  standings: state.standings.standings
 });
 
 export default connect(mapStateToProps, { standingsRequest })(Standings);
